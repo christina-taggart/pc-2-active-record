@@ -4,4 +4,8 @@ class Skill < ActiveRecord::Base
 
   validates :name, uniqueness: true
 
+  def user_with_proficiency(rating)
+    user_id = Rating.where(rating: rating, skill_id: self.id).first.user_id
+    User.find(user_id)
+  end
 end
