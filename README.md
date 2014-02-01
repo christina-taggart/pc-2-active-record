@@ -1,4 +1,4 @@
-# 2 Active Record [People Skills][office space]
+# P2 Active Record [People Skills][office space]
 
 ## Learning Competencies
 
@@ -8,18 +8,16 @@
 
 ## Summary
 
-### Overview
-
 In order for you to better understand your competence with ActiveRecord, we've
 built a challenge that is purely ActiveRecord. No Sinatra, Javascript, jQuery,
 or anything. Yay!
 
-### Core
+## Releases
+
+###Release 0 : 
 
 Demonstrate you can create working Ruby code from scratch that uses ActiveRecord
 to model a many-to-many relationship.
-
-#### Objectives
 
 Start with the skeleton in [`./source/ar-people-skills`][office space].  Build
 ActiveRecord Models, Migrations, Validations, and Relations to model the
@@ -37,13 +35,7 @@ following user stories:
 2. You can determine a `User`s proficiency rating for a particular `Skill` in `rake console`
 3. running `ruby driver_code.rb` results in all true statements
 
-## Releases
-
-For portfolio challenges you will be your own guide.
-
-## Optimize Your Learning
-
-_None_
+<!-- ## Optimize Your Learning -->
 
 ## Resources
 
