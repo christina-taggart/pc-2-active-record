@@ -1,39 +1,52 @@
-# 2 Active Record People Skills 
- 
-##Learning Competencies 
+# 2 Active Record [People Skills][office space]
 
-##Summary 
+## Learning Competencies
 
- ## Overview
+* Use Active Record Migrations
+* Use Active Record Queries
+* Use Active Record to create Associations between database tables
+
+## Summary
+
+### Overview
 
 In order for you to better understand your competence with ActiveRecord, we've
-built a challenge that is purely ActiveRecord. No sinatra, javascript, jquery,
+built a challenge that is purely ActiveRecord. No Sinatra, Javascript, jQuery,
 or anything. Yay!
 
 ### Core
-Demonstrate you can create working ruby code from scratch that uses ActiveRecord
-to model a many to many relationship.
+
+Demonstrate you can create working Ruby code from scratch that uses ActiveRecord
+to model a many-to-many relationship.
 
 #### Objectives
-Start with this
-[skeleton](http://s3.amazonaws.com/dbc_socrates/challenges/ar-people-skills.zip),
-then build ActiveRecord Models, Migrations, Validations, and Relations to model the following user stories:
 
-1. A User has many skills and a Skill can be assigned to many users.
-2. A User has a proficiency rating for each of their skills.
-3. Multiple skills can not be saved with the same name.
+Start with the skeleton in [`./source/ar-people-skills`][office space].  Build
+ActiveRecord Models, Migrations, Validations, and Relations to model the
+following user stories:
+
+1. A `User` has many skills and a `Skill` can be assigned to many users.
+2. A `User` has a proficiency rating for each of their skills.
+3. Multiple `Skill`s can not be saved with the same name.
 
 **(Hint: )** You will need to create several instance methods on the models for the driver code to pass.
 
 #### You will know you are done when:
-1. You can create a User and assign them skills from `rake console`
-2. You can determine a users proficiency rating for a particular skill in `rake console`
+
+1. You can create a `User` and assign them skills from `rake console`
+2. You can determine a `User`s proficiency rating for a particular `Skill` in `rake console`
 3. running `ruby driver_code.rb` results in all true statements
- 
 
-##Releases
-###Release 0 
+## Releases
 
-##Optimize Your Learning 
+For portfolio challenges you will be your own guide.
 
-##Resources
+## Optimize Your Learning
+
+_None_
+
+## Resources
+
+* ["Office Space"][office space]: a film about life in the tech industry you should see
+
+[office space]:   http://www.youtube.com/watch?v=RAY27NU1Jog
