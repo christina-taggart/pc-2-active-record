@@ -13,9 +13,6 @@ def assert(boolean, message)
 end
 
 
-
-
-
 # DO NOT CHANGE BELOW THIS LINE. FEEL FREE TO WRITE MORE DRIVER CODE ABOVE
 clean_up_data
 
