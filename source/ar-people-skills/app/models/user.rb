@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
-  has_many :user_skills
-  has_many :skills, through: :user_skills
+  has_many :ratings
+  has_many :skills, through: :ratings
 
   def proficiency_for(skill)
-    tested_user_skill = UserSkill.where(user_id: self.id, skill_id: skill.id).first
-    tested_user_skill.proficiency
+    Rating.where(user_id: self.id, skill_id: skill.id).first.proficiency
+  end
+
+  def set_proficiency_for(skill, level)
+    Rating.where(user_id: self.id, skill_id: skill.id).first.update_attributes(proficiency: level)
   end
 end

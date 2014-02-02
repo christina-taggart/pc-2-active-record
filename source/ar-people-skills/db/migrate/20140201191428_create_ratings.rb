@@ -1,6 +1,6 @@
-class CreateUserSkills < ActiveRecord::Migration
+class CreateRatings < ActiveRecord::Migration
   def change
-    create_table :user_skills do |col|
+    create_table :ratings do |col|
       col.belongs_to :user
       col.belongs_to :skill
       col.integer :proficiency
