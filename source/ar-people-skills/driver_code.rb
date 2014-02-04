@@ -15,7 +15,6 @@ end
 
 
 
-
 # DO NOT CHANGE BELOW THIS LINE. FEEL FREE TO WRITE MORE DRIVER CODE ABOVE
 clean_up_data
 
@@ -23,7 +22,7 @@ zee = User.create({:name => "Zee", :email => "zee@example.com"})
 beard_growing = Skill.create({:name => "Beard Growing", :context => "personal"})
 
 
-### This confirms you may add a skill to a user 
+### This confirms you may add a skill to a user
 zee.skills << beard_growing
 assert(Skill.find_by_name("Beard Growing").users.include?(zee), "Zee has the beard growing skill!")
 
@@ -48,4 +47,3 @@ assert(jesse.proficiency_for(beard_growing) == 0, " Jesse cannot grow a beard :(
 zee.set_proficiency_for(beard_growing, 900)
 beard_skills = Skill.find_by_name("Beard Growing").user_with_proficiency(900) == zee
 assert(beard_skills, "! Zee is a Beard Growing MASTER")
-
