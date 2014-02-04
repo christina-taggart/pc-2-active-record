@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :skills, through: :skills_users
+	has_many :abilities
+  has_many :skills, through: :abilities
 end
