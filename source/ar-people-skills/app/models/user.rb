@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
     Rating.where(user_id: self.id, skill_id: skill.id).first.proficiency
   end
 
-  def set_proficiency_for(skill, value)
-    Rating.where(user_id: self.id, skill_id: skill.id).update_all(proficiency: value)
+  def set_proficiency_for(skill_name, value)
+    Rating.where(user_id: self.id, skill_id: skill_name.id).first.update_attributes(proficiency: value)
   end
 end
