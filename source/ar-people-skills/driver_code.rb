@@ -23,7 +23,7 @@ zee = User.create({:name => "Zee", :email => "zee@example.com"})
 beard_growing = Skill.create({:name => "Beard Growing", :context => "personal"})
 
 
-### This confirms you may add a skill to a user 
+### This confirms you may add a skill to a user
 zee.skills << beard_growing
 assert(Skill.find_by_name("Beard Growing").users.include?(zee), "Zee has the beard growing skill!")
 

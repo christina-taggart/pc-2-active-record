@@ -4,6 +4,7 @@ class CreateSkills < ActiveRecord::Migration
       t.string :name
       t.string :context
 
+
       t.timestamps
     end
   end
