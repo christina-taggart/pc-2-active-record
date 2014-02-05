@@ -5,7 +5,7 @@ class CreateAbilities < ActiveRecord::Migration
       col.belongs_to :skill
       col.string :user_id
       col.string :skill_id
-      col.string :proficiency_rating
+      col.string :proficiency_rating, :default => 0
 	end
   end
 end
