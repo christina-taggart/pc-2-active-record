@@ -3,7 +3,7 @@ class CreateScores < ActiveRecord::Migration
     create_table :scores do |t|
       t.belongs_to :user
       t.belongs_to :skill
-      t.integer :score
+      t.integer :rating, default: 0
     end
   end
 end

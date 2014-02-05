@@ -6,11 +6,11 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: :true
 
   def proficiency_for(skill)
-    Score.where(user_id: self.id, skill_id: skill.id).first.score
+    Score.where(user_id: self.id, skill_id: skill.id).first.rating
   end
 
-  def set_proficiency_for(skill, score)
-    Score.where(user_id: self.id, skill_id: skill.id).first.update_attributes(score: score)
+  def set_proficiency_for(skill, rating)
+    Score.where(user_id: self.id, skill_id: skill.id).first.update_attributes(rating: rating)
   end
 
 
