@@ -1,4 +1,4 @@
-# Require config/environment.rb. This loads app/models, etc.
+2# Require config/environment.rb. This loads app/models, etc.
 require ::File.expand_path('../config/environment',  __FILE__)
 
 ### TEST HELPERS ###
