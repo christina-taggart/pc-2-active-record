@@ -6,7 +6,8 @@ class Skill < ActiveRecord::Base
 	validates :name, uniqueness: true
 
   def user_with_proficiency(level)
-    user_id = Proficiency.where(skill_id: self.id, proficiency: level).first.user_id
-    User.find(user_id)
+    self.proficiencies.find_by_proficiency_rating(level).user
+    # user_id = Proficiency.where(skill_id: self.id, proficiency_rating: level).first.user_id
+    # User.find(user_id)
   end
 end
