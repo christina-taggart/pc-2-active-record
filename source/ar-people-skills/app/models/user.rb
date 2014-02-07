@@ -2,13 +2,12 @@ class User < ActiveRecord::Base
   has_many :proficiencies
   has_many :skills, through: :proficiencies
 
-  def self.proficiency_for(skill)
-    Proficiency.where(skill: skill)
+  def proficiency_for(skill)
+    self.proficiencies.where(skill: skill)
   end
 
-  def self.set_proficiency_for(skill, proficiency_level)
-    skill = Proficiency.where(skill: skill)
-    skill.proficiency_level << proficiency_level
+  def set_proficiency_for(skill, proficiency)
+    self.proficiencies.where(skill_id: skill.id).first.update_attributes(proficiency: proficiency)
   end
 end
 
