@@ -3,7 +3,7 @@ class Skill < ActiveRecord::Base
   has_many :users, :through => :ratings
   validates :name, :uniqueness => true
   def user_with_proficiency(rating)
-    rating = Rating.where(skill_id: self.id, proficiency_rating: rating).first
-    User.find(rating.user_id)
+    proficiency = self.ratings.find_by_proficiency_rating(rating)
+    proficiency.user if proficiency
   end
 end
