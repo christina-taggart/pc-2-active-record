@@ -1,6 +1,6 @@
 class CreateUsersSkills < ActiveRecord::Migration
   def change
-  	create_table :users_skills do |t|
+  	create_table :proficiencies do |t|
   		t.belongs_to :user
       t.belongs_to :skill
   		t.float :proficiency
